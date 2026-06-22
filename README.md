@@ -21,10 +21,10 @@ Colocar os arquivos na mesma pasta do script ou Definir um caminho específico n
 
 4. Durante a execução, o script exibirá:
 
-> Quantidade de arquivos encontrados
-> Status de cada conversão:
-> OK → Conversão realizada com sucesso
-> Erro → Tentativa automática até 3 vezes
+- Quantidade de arquivos encontrados;
+- Status de cada conversão:
+- OK → Conversão realizada com sucesso
+- Erro → Tentativa automática até 3 vezes
 
 Obs: Caso dê erro em todos ou o mesmo não converta corretamente, analise a extensão dos arquivos que está tentando converter, na estrutura do script está apenas "(doc|docx|xls|xlsx|ppt|pptx|rtf)", mas pode acrescentar outras extensões compatíveis com o pacote office, como por exemplo "docm ou xlsm";
 
