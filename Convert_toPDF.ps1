@@ -10,7 +10,7 @@ if (-not (Test-Path $folder)) {
 }
 
 $files = Get-ChildItem -Path $folder -File | 
-         Where-Object { $_.Extension -match '\.(doc|docx|xls|xlsx|ppt|pptx|rtf)$' }
+         Where-Object { $_.Extension -match '\.(doc|docx|xls|xlsx|xlsm|ppt|pptx|rtf)$' }
 
 if ($files.Count -eq 0) {
     Write-Host "Nenhum arquivo encontrado." -ForegroundColor Yellow
@@ -46,7 +46,7 @@ function Convert-With-Retry {
                     $doc.SaveAs([ref]$pdfName, [ref]17)
                     $doc.Close()
                 }
-                '\.(xls|xlsx)$' {
+                '\.(xls|xlsx|xlsm)$' {
                     if (-not $excel) {
                         $excel = New-Object -ComObject Excel.Application
                         $excel.Visible = $false
